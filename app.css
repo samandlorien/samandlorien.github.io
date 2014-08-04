@@ -1,10 +1,4 @@
-﻿/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
+﻿body {
     font-family: 'Segoe UI', sans-serif;
 	background: #F0F0F0;
 }
@@ -14,6 +8,7 @@ span {
 }
 
 nav {
+    display: block;
 	position: absolute;
 	left: 0;
 	width: 100%;

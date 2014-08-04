@@ -1,12 +1,12 @@
 ﻿/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
+    display: block;
 }
 
 body {
     font-family: 'Segoe UI', sans-serif;
-	background: #F0F0F0;
+    background: #F0F0F0;
 }
 
 span {
@@ -14,37 +14,131 @@ span {
 }
 
 nav {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	background: url("images/nav_background.png");
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: url("images/nav_background.png");
 }
 
-nav ul {
-    margin: 0 auto;
-    width: 500px;
+    nav ul {
+        margin: 0 auto;
+        width: 400px;
+        list-style: none;
+    }
+
+        nav ul li {
+            float: left;
+        }
+
+            nav ul li a {
+                display: block;
+                margin-right: 20px;
+                width: 100px;
+                font-size: 14px;
+                line-height: 44px;
+                text-align: center;
+                text-decoration: none;
+                color: #777;
+            }
+
+        
+            nav ul li a:hover {
+                color: #fff;
+            }
+
+            nav ul li.selected a {
+                color: #fff;
+            }
+
+.menu ul {
+    margin: 30px auto auto 30px;
     list-style: none;
 }
 
-nav ul li {
-    float: left;
+    .menu ul li {
+        float: right;
+    }
+
+        .menu ul li a {
+            display: block;
+            margin: 0px 5px;
+            background: #0f70d9;
+            border-radius: 15px;
+            font-size 16px;
+            text-decoration: none;
+            color: #F0F0F0;
+            padding: 5px 10px;
+        }
+
+.menu a:hover {
+    color: black;
+    background: #00ffff;
 }
 
-nav ul li a {
-    display: block;
-    margin-right: 20px;
-    width: 100px;
-    font-size: 14px;
-    line-height: 44px;
-    text-align: center;
-    text-decoration: none;
-    color: #777;
+/* modifications below to attempt to make it better for mobile devices */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    nav ul {
+        width: 700px;
+    }
+
+        nav ul li a {
+            width: 200px;
+            font-size: 32px;
+        }
 }
 
-nav ul li a:hover {
-    color: #fff;
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+    /* Styles */
 }
-			
-nav ul li.selected a {
-    color: #fff;
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    nav ul {
+        width: 700px;
+    }
+
+        nav ul li a {
+            width: 200px;
+            font-size: 32px;
+        }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+    /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+    /* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+    nav ul {
+        width: 700px;
+    }
+
+        nav ul li a {
+            width: 200px;
+            font-size: 32px;
+        }
 }

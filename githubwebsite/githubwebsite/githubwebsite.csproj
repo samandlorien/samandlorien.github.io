@@ -17,6 +17,7 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="add_event.html" />
     <Content Include="app.css" />
     <Content Include="calendar.html" />
     <Content Include="events.html" />

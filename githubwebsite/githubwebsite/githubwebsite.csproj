@@ -18,7 +18,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app.css" />
+    <Content Include="calendar.html" />
+    <Content Include="events.html" />
+    <Content Include="food.html" />
     <Content Include="index.html" />
+    <Content Include="images\nav_background.png" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>

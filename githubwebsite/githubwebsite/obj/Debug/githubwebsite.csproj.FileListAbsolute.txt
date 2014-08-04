@@ -1,5 +1,0 @@
-C:\Users\antim_000\Documents\GitHub\samandlorien.github.io\githubwebsite\githubwebsite\bin\githubwebsite.dll.config
-C:\Users\antim_000\Documents\GitHub\samandlorien.github.io\githubwebsite\githubwebsite\bin\githubwebsite.dll
-C:\Users\antim_000\Documents\GitHub\samandlorien.github.io\githubwebsite\githubwebsite\bin\githubwebsite.pdb
-C:\Users\antim_000\Documents\GitHub\samandlorien.github.io\githubwebsite\githubwebsite\obj\Debug\githubwebsite.dll
-C:\Users\antim_000\Documents\GitHub\samandlorien.github.io\githubwebsite\githubwebsite\obj\Debug\githubwebsite.pdb

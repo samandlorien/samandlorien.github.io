@@ -13,42 +13,31 @@ span {
     font-style: italic;
 }
 
-nav {
-    position: absolute;
-    left: 0;
+div.nav_div {
     width: 100%;
     background: url("images/nav_background.png");
 }
 
-    nav ul {
-        margin: 0 auto;
-        width: 400px;
-        list-style: none;
+nav {
+    width: 500px;
+    margin: 0 auto;
+}
+
+    nav a {
+        margin-right: 20px;
+        font-size: 32px;
+        text-decoration: none;
+        color: #777;
     }
 
-        nav ul li {
-            float: left;
+
+        nav a:hover {
+            color: #fff;
         }
 
-            nav ul li a {
-                display: block;
-                margin-right: 20px;
-                width: 100px;
-                font-size: 14px;
-                line-height: 44px;
-                text-align: center;
-                text-decoration: none;
-                color: #777;
-            }
-
-        
-            nav ul li a:hover {
-                color: #fff;
-            }
-
-            nav ul li.selected a {
-                color: #fff;
-            }
+        nav a.selected {
+            color: #fff;
+        }
 
 .menu ul {
     margin: 30px auto auto 30px;
@@ -79,14 +68,7 @@ nav {
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    nav ul {
-        width: 700px;
-    }
-
-        nav ul li a {
-            width: 200px;
-            font-size: 32px;
-        }
+    /* Styles*/
 }
 
 /* Smartphones (landscape) ----------- */
@@ -96,14 +78,7 @@ nav {
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
-    nav ul {
-        width: 700px;
-    }
-
-        nav ul li a {
-            width: 200px;
-            font-size: 32px;
-        }
+    /* Styles */
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -133,12 +108,5 @@ nav {
 
 /* iPhone 4 ----------- */
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
-    nav ul {
-        width: 700px;
-    }
-
-        nav ul li a {
-            width: 200px;
-            font-size: 32px;
-        }
+    /* Styles */
 }

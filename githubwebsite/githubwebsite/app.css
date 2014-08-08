@@ -41,6 +41,34 @@ nav {
             color: #fff;
         }
 
+ul.calendar {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+}
+
+    ul.calendar li {
+        margin: 0px;
+        list-style: none;
+        border: solid;
+        border-color: red;
+        float: left;
+    }
+
+        ul.calendar li .date_header {
+            border-bottom: solid;
+            text-align: center;
+        }
+
+        ul.calendar li .date_header sup {
+            text-align: right;
+            background: yellow;
+        }
+
+        ul.calendar li p {
+            margin: 0px;
+        }
+
 .menu ul {
     margin: 30px auto auto 30px;
     list-style: none;

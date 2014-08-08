@@ -29,8 +29,11 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="food.ts" />
+    <TypeScriptCompile Include="jquery.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="food.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

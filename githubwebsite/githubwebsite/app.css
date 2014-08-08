@@ -4,6 +4,25 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
+div.hide_background {
+    width: 100%;
+    height: 100%;
+    opacity: 0.95;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    background-color: #313131;
+    overflow: auto;
+}
+
+#preference_form {
+    position: absolute;
+    left: 50%;
+    top: 17%;
+    margin-left: -300px;
+}
+
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #F0F0F0;
@@ -41,21 +60,46 @@ nav.nav_menu {
             color: #fff;
         }
 
-        nav.buttons
-        {
-            margin: 10px auto;
-        }
+nav.buttons {
+    margin: 10px auto;
+}
 
-nav.buttons a {
+input {
+    font-size: 32px;
+}
+
+select {
+    font-size: 32px;
+}
+
+.button {
     background: url("images/nav_background.png");
     border-radius: 15px;
     color: #F0F0F0;
     padding: 0px 10px;
     text-decoration: none;
+    border: none;
+    font-size: 24px;
 }
-    nav.buttons a:hover {
+
+    .button:hover {
         color: black;
         background: linear-gradient(to top, gray, white);
+    }
+
+.inverse_button {
+    background: linear-gradient(to top, gray, white);
+    border-radius: 15px;
+    color: black;
+    padding: 0px 10px;
+    text-decoration: none;
+    border: none;
+    font-size: 32px;
+}
+
+    .inverse_button:hover {
+        color: #F0F0F0;
+        background: url("images/nav_background.png");
     }
 
 div.left-side-list {

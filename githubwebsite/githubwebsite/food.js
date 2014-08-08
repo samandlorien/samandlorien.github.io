@@ -84,4 +84,12 @@ $.getJSON("food.json", function (json) {
     }
     allergy.appendChild(algy_list);
 });
+
+function algy_show() {
+    document.getElementById('preference_div').style.display = "block";
+}
+
+function algy_hide() {
+    document.getElementById('preference_div').style.display = "none";
+}
 //# sourceMappingURL=food.js.map

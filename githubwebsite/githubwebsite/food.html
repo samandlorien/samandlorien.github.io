@@ -10,21 +10,40 @@
     <script src="nav_menu.js"></script>
     <div id="allergy_list" class="left-side-list">
         <nav class="buttons">
-            <a href="food.html">Add Preference</a>
+            <button onclick="algy_show()" class="button">Add Preference</button>
         </nav>
     </div>
     <div id="utensile_list" class="right-side-list"><p>Available Items:</p></div>
     <div id="meal_calendar"></div>
 
+    <div id="preference_div" class="hide_background" style="display:none">
+        <form id="preference_form">
+            <p>
+                <input type="text" name="person" value="sam">
+                <select name="reaction">
+                    <option value="0" selected>likes</option>
+                    <option value="1">is allergic to</option>
+                    <option value="2">does not like</option>
+                </select>
+            </p>
+            <p>
+                <input type="text" name="food" value="cheese">
+                <input type="button" value="Cancel" onclick="algy_hide()" class="inverse_button">
+                <input type="submit" value="Okay" class="inverse_button">
+            </p>
+        </form>
+    </div>
+
+
     <script>
-    /*    var data = { 'bob': 'foo', 'paul': 'dog' };
-        $.ajax({
-            url: url,
-            type: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify(data),
-            dataType: 'json'
-        });*/
+        /*    var data = { 'bob': 'foo', 'paul': 'dog' };
+            $.ajax({
+                url: url,
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                dataType: 'json'
+            });*/
     </script>
 </body>
 </html>

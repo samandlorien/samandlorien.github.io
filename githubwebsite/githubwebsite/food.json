@@ -1,1 +1,1 @@
-[{"day":0,"chef1":"","chef2":"sam","chef3":""},{"day":1,"chef1":"","chef2":"sam","chef3":""}]
+{"calendar":[{"day":0,"chef1":"self","chef2":"","chef3":""},{"day":1,"chef1":"","chef2":"","chef3":""},{"day":2,"chef1":"","chef2":"","chef3":""},{"day":3,"chef1":"","chef2":"","chef3":""},{"day":4,"chef1":"","chef2":"","chef3":""},{"day":5,"chef1":"","chef2":"","chef3":""},{"day":6,"chef1":"","chef2":"","chef3":""},{"day":7,"chef1":"","chef2":"","chef3":""},{"day":8,"chef1":"Hampton!","chef2":" ","chef3":" "}],"allergies":[{"person":"sam","reaction":2,"food":"mushrooms"}]}

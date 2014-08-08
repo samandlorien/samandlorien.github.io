@@ -20,6 +20,7 @@
     <Content Include="add_event.html" />
     <Content Include="app.css" />
     <Content Include="calendar.html" />
+    <Content Include="daypilot\scripts\daypilot-all.min.js" />
     <Content Include="events.html" />
     <Content Include="food.html" />
     <Content Include="index.html" />
@@ -34,6 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="food.json" />
+    <Content Include="upload.php" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -41,6 +43,7 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

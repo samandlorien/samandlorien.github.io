@@ -4,23 +4,45 @@ class Day {
     constructor(public day: number, public chef1: string, public chef2: string, public chef3: string) {
     }
 
-    Day() { return this.day; }
-
     // taken from: http://stackoverflow.com/questions/17449074/parsing-json-from-typescript-restores-data-members-but-not-type-cannot-call-met/17449450#17449450
     static fromJson(json) {
         return new Day(json.day, json.chef1, json.chef2, json.chef3);
     }
 }
 
-$.getJSON("food.json", function (json_days) {
+class Allergy {
+    constructor(public person: string, public reaction: number, public food: string) {
+    }
+
+    Reaction() {
+        switch (this.reaction) {
+            default:
+            case 0:
+                return "likes";
+            case 1:
+                return "is allergic to";
+            case 2:
+                return "does not like";
+        }
+    }
+
+    static fromJson(json) {
+        return new Allergy(json.person, json.reaction, json.food);
+    }
+}
+
+$.getJSON("food.json", function (json) {
     var weekdays: string[] = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
     var days: Day[] = [];
-    for (var i = 0; i < json_days.length; i++) {
-        days.push(Day.fromJson(json_days[i]));
+    for (var i = 0; i < json.calendar.length; ++i) {
+        days.push(Day.fromJson(json.calendar[i]));
+    }
+    var allergies: Allergy[] = [];
+    for (var i = 0; i < json.allergies.length; ++i) {
+        allergies.push(Allergy.fromJson(json.allergies[i]));
     }
 
     var calendar: HTMLElement = document.getElementById('meal_calendar');
-
     var cal_list = document.createElement('ul');
     cal_list.setAttribute('class', 'calendar');
     for (var i = 0; i < days.length; ++i) {
@@ -30,15 +52,15 @@ $.getJSON("food.json", function (json_days) {
         day_header.setAttribute('class', 'date_header');
         day_header.innerHTML = weekdays[days[i].day % weekdays.length] + ' <sup>' + (18 + days[i].day).toString() + '</sup>';
         day_div.appendChild(day_header);
-        var day_body = document.createElement('div');
-        var breakfast = document.createElement('p');
-        breakfast.innerHTML = 'Breakfast: ' + ((days[i].chef1 === "") ? "[NOT ASSIGNED]" : days[i].chef1);
+        var day_body = document.createElement('table');
+        var breakfast = document.createElement('tr');
+        breakfast.innerHTML = '<td style="text-align:right">Breakfast:</td><td>' + ((days[i].chef1 === "") ? "[NOT ASSIGNED]" : days[i].chef1) + '</td>';
         day_body.appendChild(breakfast);
-        var lunch = document.createElement('p');
-        lunch.innerHTML = 'Lunch: ' + ((days[i].chef2 === "") ? "[NOT ASSIGNED]" : days[i].chef2);
+        var lunch = document.createElement('tr');
+        lunch.innerHTML = '<td style="text-align:right">Lunch:</td><td>' + ((days[i].chef2 === "") ? "[NOT ASSIGNED]" : days[i].chef2) + '</td>';
         day_body.appendChild(lunch);
-        var dinner = document.createElement('p');
-        dinner.innerHTML = 'Dinner: ' + ((days[i].chef3 === "") ? "[NOT ASSIGNED]" : days[i].chef3);
+        var dinner = document.createElement('tr');
+        dinner.innerHTML = '<td style="text-align:right">Dinner:</td><td>' + ((days[i].chef3 === "") ? "[NOT ASSIGNED]" : days[i].chef3) + '</td>';
         day_body.appendChild(dinner);
         day_div.appendChild(day_body);
         day_li.appendChild(day_div);
@@ -46,11 +68,13 @@ $.getJSON("food.json", function (json_days) {
     }
     calendar.appendChild(cal_list);
 
-
-    //this.element.innerHTML += "The time is: ";
-    //this.span = document.createElement('span');
-    //this.element.appendChild(this.span);
-    //this.span.innerText = new Date().toUTCString();
-
-    //alert(JSON.stringify(days));
+    var allergy: HTMLElement = document.getElementById('allergy_list');
+    var algy_list = document.createElement('ul');
+    algy_list.setAttribute('class', 'side-list');
+    for (var i = 0; i < allergies.length; ++i) {
+        var algy_li = document.createElement('li');
+        algy_li.innerHTML = '<p>' + allergies[i].person + ' ' + allergies[i].Reaction() + ' ' + allergies[i].food + '</p>';
+        algy_list.appendChild(algy_li);
+    }
+    allergy.appendChild(algy_list);
 });

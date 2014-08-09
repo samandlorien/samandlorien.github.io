@@ -104,6 +104,7 @@ function algy_submit() {
         /*contentType: "application/json; charset=utf-8",*/
         success: function (data) {
             console.log(data);
+            window.location.replace("food.html");
         },
         error: function (e) {
             alert("tears and sadness :'(");

@@ -2,7 +2,7 @@
 var pages = [ ["food.html", "Meal Plan"], ["calendar.html", "Calendar"], ["events.html", "Activities"] ];
 
 document.write('<div class="nav_div">\
-                    <nav>');
+                    <nav class="nav_menu">');
 for(var i = 0; i < pages.length; ++i)
 {
     document.write('<a ');

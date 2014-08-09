@@ -4,10 +4,29 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
+div.hide_background {
+    width: 100%;
+    height: 100%;
+    opacity: 0.95;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    background-color: #313131;
+    overflow: auto;
+}
+
+#preference_form {
+    position: absolute;
+    left: 50%;
+    top: 17%;
+    margin-left: -300px;
+}
+
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #F0F0F0;
-    width: 1000px;
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -20,12 +39,12 @@ div.nav_div {
     background: url("images/nav_background.png");
 }
 
-nav {
+nav.nav_menu {
     width: 500px;
     margin: 0 auto;
 }
 
-    nav a {
+    nav.nav_menu a {
         margin-right: 20px;
         font-size: 32px;
         text-decoration: none;
@@ -33,13 +52,81 @@ nav {
     }
 
 
-        nav a:hover {
+        nav.nav_menu a:hover {
             color: #fff;
         }
 
-        nav a.selected {
+        nav.nav_menu a.selected {
             color: #fff;
         }
+
+nav.buttons {
+    margin: 10px auto;
+}
+
+input {
+    font-size: 32px;
+}
+
+select {
+    font-size: 32px;
+}
+
+.button {
+    background: url("images/nav_background.png");
+    border-radius: 15px;
+    color: #F0F0F0;
+    padding: 0px 10px;
+    text-decoration: none;
+    border: none;
+    font-size: 24px;
+}
+
+    .button:hover {
+        color: black;
+        background: linear-gradient(to top, gray, white);
+    }
+
+.inverse_button {
+    background: linear-gradient(to top, gray, white);
+    border-radius: 15px;
+    color: black;
+    padding: 0px 10px;
+    text-decoration: none;
+    border: none;
+    font-size: 32px;
+}
+
+    .inverse_button:hover {
+        color: #F0F0F0;
+        background: url("images/nav_background.png");
+    }
+
+div.left-side-list {
+    border: solid;
+    border-radius: 10px;
+    position: fixed;
+    left: 5%;
+    padding: 0px 10px;
+}
+
+ul.side-list {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+}
+
+    ul.side-list li {
+        list-style: none;
+    }
+
+div.right-side-list {
+    border: solid;
+    border-radius: 10px;
+    position: fixed;
+    right: 5%;
+    padding: 0px 10px;
+}
 
 ul.calendar {
     display: block;
@@ -48,10 +135,10 @@ ul.calendar {
 }
 
     ul.calendar li {
-        margin: 0px;
+        margin: 5px;
         list-style: none;
         border: solid;
-        border-color: red;
+        border-color: black;
         float: left;
     }
 
@@ -60,10 +147,9 @@ ul.calendar {
             text-align: center;
         }
 
-        ul.calendar li .date_header sup {
-            text-align: right;
-            background: yellow;
-        }
+            ul.calendar li .date_header sup {
+                text-align: right;
+            }
 
         ul.calendar li p {
             margin: 0px;
@@ -83,7 +169,7 @@ ul.calendar {
             margin: 0px 5px;
             background: #0f70d9;
             border-radius: 15px;
-            font-size 16px;
+            font-size: 16px;
             text-decoration: none;
             color: #F0F0F0;
             padding: 5px 10px;

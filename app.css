@@ -203,7 +203,16 @@ div.right-side-list {
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
-    /* Styles */
+    body {
+    width: 100%;
+}
+div.left-side-list {
+    position: static;
+}
+
+div.right-side-list {
+    position: static;
+}
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -233,5 +242,14 @@ div.right-side-list {
 
 /* iPhone 4 ----------- */
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
-    /* Styles */
+    body {
+    width: 100%;
+}
+div.left-side-list {
+    position: static;
+}
+
+div.right-side-list {
+    position: static;
+}
 }

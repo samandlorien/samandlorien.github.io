@@ -86,3 +86,24 @@ function algy_show() {
 function algy_hide() {
     document.getElementById('preference_div').style.display = "none";
 }
+
+function algy_submit() {
+    var allergy: Allergy = new Allergy((<HTMLInputElement>document.getElementById("form_person")).value,
+        +(<HTMLSelectElement>document.getElementById("form_reaction")).value,
+        (<HTMLInputElement>document.getElementById("form_food")).value);
+
+    $.ajax({
+        type: "POST",
+        //url: "http://samandlorien.zxq.net/upload.php",
+        url: "upload.php",
+        data: { 'food_allergy': allergy },
+        /*contentType: "application/json; charset=utf-8",*/
+        success: function (data) {
+            console.log(data);
+        },
+        error: function (e) {
+            alert("tears and sadness :'(");
+            console.log(e);
+        }
+    });
+}

@@ -184,7 +184,16 @@ ul.calendar {
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    /* Styles*/
+    body {
+    width: 100%;
+}
+div.left-side-list {
+    position: static;
+}
+
+div.right-side-list {
+    position: static;
+}
 }
 
 /* Smartphones (landscape) ----------- */

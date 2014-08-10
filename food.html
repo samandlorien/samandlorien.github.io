@@ -8,13 +8,15 @@
 </head>
 <body>
     <script src="nav_menu.js"></script>
+    <div id="meal_calendar"></div>
+
     <div id="allergy_list" class="left-side-list">
         <nav class="buttons">
             <button onclick="algy_show()" class="button">Add Preference</button>
         </nav>
     </div>
+
     <div id="utensile_list" class="right-side-list"><p>Available Items:</p></div>
-    <div id="meal_calendar"></div>
 
     <div id="preference_div" class="hide_background" style="display:none">
         <form id="preference_form">
@@ -34,16 +36,28 @@
         </form>
     </div>
 
+    <div id="new_chef_div" class="hide_background" style="display:none">
+        <form id="new_chef_form">
+            <input type="hidden" name="day" id="form_day">
+            <input type="hidden" name="meal" id="form_meal">
+            <input type="text" name="chef" id="form_chef" value="name">
+            <input type="button" value="Cancel" onclick="add_chef_hide()" class="inverse_button">
+            <input type="button" value="Okay" onclick="add_chef_submit()" class="inverse_button">
+        </form>
+    </div>
 
     <script>
-        /*    var data = { 'bob': 'foo', 'paul': 'dog' };
-            $.ajax({
-                url: url,
-                type: 'POST',
-                contentType: 'application/json',
-                data: JSON.stringify(data),
-                dataType: 'json'
-            });*/
+        $(function () {
+            // this doesnt really seem to do anything except disable the enter button.
+            $("form input").keypress(function (e) {
+                if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
+                    $('button[type=button] .default').click();
+                    return false;
+                } else {
+                    return true;
+                }
+            });
+        });
     </script>
 </body>
 </html>

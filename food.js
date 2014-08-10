@@ -60,13 +60,13 @@ $.getJSON("food.json", function (json) {
         day_div.appendChild(day_header);
         var day_body = document.createElement('table');
         var breakfast = document.createElement('tr');
-        breakfast.innerHTML = '<td style="text-align:right">Breakfast:</td><td>' + ((days[i].chef1 === "") ? "[NOT ASSIGNED]" : days[i].chef1) + '</td>';
+        breakfast.innerHTML = '<td style="text-align:right">Breakfast:</td><td>' + ((days[i].chef1 === "") ? '<button style="font-size: 12px;border-radius:0px;" ' + 'class="button" onclick="add_chef_show(' + days[i].day + ',1)">assign</button>' : days[i].chef1) + '</td>';
         day_body.appendChild(breakfast);
         var lunch = document.createElement('tr');
-        lunch.innerHTML = '<td style="text-align:right">Lunch:</td><td>' + ((days[i].chef2 === "") ? "[NOT ASSIGNED]" : days[i].chef2) + '</td>';
+        lunch.innerHTML = '<td style="text-align:right">Lunch:</td><td>' + ((days[i].chef2 === "") ? '<button style="font-size: 12px;border-radius:0px;" ' + 'class="button" onclick="add_chef_show(' + days[i].day + ',2)">assign</button>' : days[i].chef2) + '</td>';
         day_body.appendChild(lunch);
         var dinner = document.createElement('tr');
-        dinner.innerHTML = '<td style="text-align:right">Dinner:</td><td>' + ((days[i].chef3 === "") ? "[NOT ASSIGNED]" : days[i].chef3) + '</td>';
+        dinner.innerHTML = '<td style="text-align:right">Dinner:</td><td>' + ((days[i].chef3 === "") ? '<button style="font-size: 12px;border-radius:0px;" ' + 'class="button" onclick="add_chef_show(' + days[i].day + ',3)">assign</button>' : days[i].chef3) + '</td>';
         day_body.appendChild(dinner);
         day_div.appendChild(day_body);
         day_li.appendChild(day_div);
@@ -104,6 +104,38 @@ function algy_submit() {
         /*contentType: "application/json; charset=utf-8",*/
         success: function (data) {
             console.log(data);
+            window.location.replace("food.html");
+        },
+        error: function (e) {
+            alert("tears and sadness :'(");
+            console.log(e);
+        }
+    });
+}
+
+function add_chef_show(day, time) {
+    document.getElementById('new_chef_div').style.display = "block";
+    document.getElementById("form_day").value = day;
+    document.getElementById("form_meal").value = time;
+}
+
+function add_chef_hide() {
+    document.getElementById('new_chef_div').style.display = "none";
+}
+
+function add_chef_submit() {
+    var day = document.getElementById("form_day").value;
+    var time = document.getElementById("form_meal").value;
+    var chef = document.getElementById("form_chef").value;
+    var new_chef = { "day": day, "time": time, "chef": chef };
+
+    $.ajax({
+        type: "POST",
+        url: "upload.php",
+        data: { 'new_chef': new_chef },
+        success: function (data) {
+            console.log(data);
+            window.location.replace("food.html");
         },
         error: function (e) {
             alert("tears and sadness :'(");

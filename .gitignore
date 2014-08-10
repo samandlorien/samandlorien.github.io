@@ -215,3 +215,4 @@ pip-log.txt
 .mr.developer.cfg
 githubwebsite/githubwebsite/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 *.cache
+*.suo

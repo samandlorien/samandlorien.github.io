@@ -1,80 +1,101 @@
 [
-{
-  "day": 0,
-  "sun": {
-	"dawn":"0548",
-	"rise":"0713",
-	"set":"1822",
-	"dark":"1948"
-  },
-  "moon":
   {
-	"rise":"0217",
-	"set":"0335"
-  },
-  "am": {
-    "high":
-    {
-      "time":"0413",
-	  "height": 3.1
+    "day": 0,
+    "sun": {
+      "dawn": "0548",
+      "rise": "0713",
+      "set": "1822",
+      "dark": "1948"
     },
-	"low":
-	{
-	  "time": "1016",
-	  "height": 0.9
-	}
-  },
-  "pm":
-  {
-	  "high":
-	  {
-	    "time":"1623",
-	    "height":3.3
-	  },
-	  "low":
-	  {
-	    "time":"1049",
-	    "height":0.7
-	  }
-  }
-},
-{
-  "day": 1,
-  "sun": {
-	"dawn":"0548",
-	"rise":"0714",
-	"set":"1821",
-	"dark":"1947"
-  },
-  "moon":
-  {
-	"rise":"0311",
-	"set":"0406"
-  },
-  "am": {
-    "high":
-    {
-      "time":"0501",
-		  "height": 3.3
+    "moon": {
+      "rise": "0217",
+      "set": "1535"
     },
-	"low":
-	{
-	  "time": "1107",
-	  "height": 0.8
-	}
+    "am": {
+      "high": {
+        "time": "0413",
+        "height": 3.1
+      },
+      "low": {
+        "time": "1016",
+        "height": 0.9
+      }
+    },
+    "pm": {
+      "high": {
+        "time": "1623",
+        "height": 3.3
+      },
+      "low": {
+        "time": "1049",
+        "height": 0.7
+      }
+    }
   },
-  "pm":
   {
-	  "high":
-	  {
-	    "time":"1709",
-	    "height":3.3
-	  },
-	  "low":
-	  {
-	    "time":"1127",
-	    "height":0.6
-	  }
+    "day": 1,
+    "sun": {
+      "dawn": "0548",
+      "rise": "0714",
+      "set": "1821",
+      "dark": "1947"
+    },
+    "moon": {
+      "rise": "0311",
+      "set": "1606"
+    },
+    "am": {
+      "high": {
+        "time": "0501",
+        "height": 3.3
+      },
+      "low": {
+        "time": "1107",
+        "height": 0.8
+      }
+    },
+    "pm": {
+      "high": {
+        "time": "1709",
+        "height": 3.3
+      },
+      "low": {
+        "time": "1127",
+        "height": 0.6
+      }
+    }
+  },
+  {
+    "day": 2,
+    "sun": {
+      "dawn": "0549",
+      "rise": "0715",
+      "set": "1820",
+      "dark": "1946"
+    },
+    "moon": {
+      "rise": "0406",
+      "set": "1638"
+    },
+    "am": {
+      "high": {
+        "time": "0543",
+        "height": 3.5
+      },
+      "low": {
+        "time": "1151",
+        "height": 0.7
+      }
+    },
+    "pm": {
+      "high": {
+        "time": "1751",
+        "height": 3.4
+      },
+      "low": {
+        "time": "--",
+        "height": 0
+      }
+    }
   }
-}
 ]

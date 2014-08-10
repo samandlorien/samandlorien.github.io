@@ -23,6 +23,13 @@ div.hide_background {
     margin-left: -300px;
 }
 
+#new_chef_form {
+    position: absolute;
+    left: 50%;
+    top: 17%;
+    margin-left: -300px;
+}
+
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #F0F0F0;

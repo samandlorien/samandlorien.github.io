@@ -26,16 +26,19 @@
     <Content Include="index.html" />
     <Content Include="images\nav_background.png" />
     <Content Include="nav_menu.js" />
+    <Content Include="weather.html" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="food.ts" />
     <TypeScriptCompile Include="jquery.d.ts" />
+    <TypeScriptCompile Include="weather.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="food.json" />
     <Content Include="upload.php" />
+    <Content Include="weather.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

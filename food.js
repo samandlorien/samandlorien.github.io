@@ -107,6 +107,7 @@ function algy_submit() {
         data: { 'food_allergy': allergy },
         /*contentType: "application/json; charset=utf-8",*/
         success: function (data) {
+            location.reload(true);
             console.log(data);
             window.location.replace("food.html");
         },
@@ -138,6 +139,7 @@ function add_chef_submit() {
         url: "upload.php",
         data: { 'new_chef': new_chef },
         success: function (data) {
+            location.reload(true);
             console.log(data);
             window.location.replace("food.html");
         },

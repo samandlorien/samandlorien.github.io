@@ -56,7 +56,11 @@ $.getJSON("food.json", function (json) {
         var day_div = document.createElement('div');
         var day_header = document.createElement('p');
         day_header.setAttribute('class', 'date_header');
-        day_header.innerHTML = weekdays[days[i].day % weekdays.length] + ' <sup>' + (18 + days[i].day).toString() + '</sup>';
+        if (days[i].day >= 0) {
+            day_header.innerHTML = weekdays[days[i].day % weekdays.length] + ' <sup>' + (18 + days[i].day).toString() + '</sup>';
+        } else {
+            day_header.innerHTML = 'Anytime!';
+        }
         day_div.appendChild(day_header);
         var day_body = document.createElement('table');
         var breakfast = document.createElement('tr');

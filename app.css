@@ -44,10 +44,11 @@ span {
 div.nav_div {
     width: 100%;
     background: url("images/nav_background.png");
+    overflow: auto;
 }
 
 nav.nav_menu {
-    width: 500px;
+    width: 600px;
     margin: 0 auto;
 }
 
@@ -113,8 +114,10 @@ div.left-side-list {
     border: solid;
     border-radius: 10px;
     position: fixed;
-    left: 5%;
+    left: 1%;
     padding: 0px 10px;
+    overflow: auto;
+    width: 21%;
 }
 
 ul.side-list {
@@ -131,8 +134,10 @@ div.right-side-list {
     border: solid;
     border-radius: 10px;
     position: fixed;
-    right: 5%;
+    right: 1%;
     padding: 0px 10px;
+    overflow: auto;
+    width: 21%;
 }
 
 ul.calendar {
@@ -189,18 +194,36 @@ ul.calendar {
 
 /* modifications below to attempt to make it better for mobile devices */
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (max-width : 1024px) {
     body {
     width: 100%;
 }
 div.left-side-list {
     position: static;
+    width: 100%;
 }
 
 div.right-side-list {
     position: static;
+    width: 100%;
 }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    body {
+        width: 100%;
+    }
+
+    div.left-side-list {
+        position: static;
+        width: 100%;
+    }
+
+    div.right-side-list {
+        position: static;
+        width: 100%;
+    }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -211,15 +234,18 @@ div.right-side-list {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
     body {
-    width: 100%;
-}
-div.left-side-list {
-    position: static;
-}
+        width: 100%;
+    }
 
-div.right-side-list {
-    position: static;
-}
+    div.left-side-list {
+        position: static;
+        width: 100%;
+    }
+
+    div.right-side-list {
+        position: static;
+        width: 100%;
+    }
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -250,13 +276,16 @@ div.right-side-list {
 /* iPhone 4 ----------- */
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
     body {
-    width: 100%;
-}
-div.left-side-list {
-    position: static;
-}
+        width: 100%;
+    }
 
-div.right-side-list {
-    position: static;
-}
+    div.left-side-list {
+        position: static;
+        width: 100%;
+    }
+
+    div.right-side-list {
+        position: static;
+        width: 100%;
+    }
 }
